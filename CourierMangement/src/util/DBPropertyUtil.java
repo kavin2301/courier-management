@@ -15,7 +15,7 @@ public class DBPropertyUtil {
             FileInputStream fis = new FileInputStream(propertyFileName);
             props.load(fis);
 
-            String url = props.getProperty("db.url");         // Already includes jdbc:mysql://...
+            String url = props.getProperty("db.url");        
             String username = props.getProperty("db.username");
             String password = props.getProperty("db.password");
 
