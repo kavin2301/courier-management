@@ -3,7 +3,7 @@ package entity;
 import java.util.Date;
 
 public class Courier {
-    private static int trackingNumberSeed = 1000; // Static seed for tracking number
+    private static int trackingNumberSeed = 1000; 
 
     private int courierID;
     private int senderUserID;
@@ -11,24 +11,24 @@ public class Courier {
     private String packageName;
     private int numberOfPackages;
     private double weight;
-    private String status; // Allowed: "Processing", "Delivered", "Cancelled"
+    private String status; 
     private String trackingNumber;
     private Date createdDate;
     private Date deliveryDate;
     private int serviceID;
-    private Integer employeeID; // Nullable
-
-    // Default constructor - auto generates tracking number and sets default status
+    private Integer employeeID; 
+    
+  
     public Courier() {
         this.trackingNumber = "TRK" + (++trackingNumberSeed);
-        this.createdDate = new Date(); // Assign current date
-        this.status = "Processing"; // ✅ Default status matches ENUM in DB
+        this.createdDate = new Date(); 
+        this.status = "Processing";
     }
 
-    // Constructor with fields except tracking number (auto-generated)
+    
     public Courier(int senderUserID, int receiverUserID, String packageName,
                    int numberOfPackages, double weight, int serviceID) {
-        this(); // calls the default constructor
+        this(); 
         this.senderUserID = senderUserID;
         this.receiverUserID = receiverUserID;
         this.packageName = packageName;
@@ -37,7 +37,6 @@ public class Courier {
         this.serviceID = serviceID;
     }
 
-    // Getters and Setters
 
     public int getCourierID() {
         return courierID;

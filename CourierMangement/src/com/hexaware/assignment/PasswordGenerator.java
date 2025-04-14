@@ -4,13 +4,13 @@ import java.security.SecureRandom;
 
 public class PasswordGenerator {
 
-    private static final String UPPERCASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    private static final String LOWERCASE = "abcdefghijklmnopqrstuvwxyz";
-    private static final String DIGITS = "0123456789";
-    private static final String SPECIAL = "!@#$%^&*()-_+=<>?";
+    private static final String uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    private static final String lowercase = "abcdefghijklmnopqrstuvwxyz";
+    private static final String digit = "0123456789";
+    private static final String special = "!@#$%^&*()-_+=<>?";
 
     public static String generatePassword(int length) {
-        String allChars = UPPERCASE + LOWERCASE + DIGITS + SPECIAL;
+        String allChars = uppercase + lowercase + digit + special;
         SecureRandom random = new SecureRandom();
         StringBuilder password = new StringBuilder();
 

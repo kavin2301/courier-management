@@ -10,7 +10,7 @@ public class CustomerOrders {
             new Courier(15, 2, 4, "Winter Jacket", "Processing")
         );
 
-        int specificCustomerId = 2; // You can change this ID for other customers
+        int specificCustomerId = 2; 
 
         System.out.println("Orders placed by Customer ID: " + specificCustomerId);
         for (Courier c : couriers) {

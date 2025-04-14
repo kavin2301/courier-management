@@ -3,7 +3,7 @@ package com.hexaware.assignment;
 public class OrderStatusChecker {
 
 	public static void main(String[] args) {
-		String status = "Delivered"; // Test status
+		String status = "Delivered"; 
 
         if (status.equalsIgnoreCase("Delivered")) {
             System.out.println("The order has been delivered.");

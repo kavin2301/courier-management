@@ -6,14 +6,13 @@ public class Payment {
     private int paymentID;
     private int courierID;
     private int locationID;
-    private Integer employeeID;  // Nullable
+    private Integer employeeID; 
     private double amount;
     private Date paymentDate;
 
-    // Default Constructor
+
     public Payment() {}
 
-    // Parameterized Constructor
     public Payment(int paymentID, int courierID, int locationID, Integer employeeID, double amount, Date paymentDate) {
         this.paymentID = paymentID;
         this.courierID = courierID;
@@ -23,7 +22,6 @@ public class Payment {
         this.paymentDate = paymentDate;
     }
 
-    // Getters and Setters
     public int getPaymentID() {
         return paymentID;
     }

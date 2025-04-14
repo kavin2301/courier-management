@@ -8,10 +8,8 @@ public class User {
     private String contactNumber;
     private String address;
 
-    // Default Constructor
     public User() {}
 
-    // Parameterized Constructor
     public User(int userID, String userName, String email, String password, String contactNumber, String address) {
         this.userID = userID;
         this.userName = userName;
@@ -21,7 +19,6 @@ public class User {
         this.address = address;
     }
 
-    // Getters and Setters
     public int getUserID() {
         return userID;
     }

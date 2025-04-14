@@ -7,10 +7,8 @@ public class Employee {
     private double salary;
     private String name;
 
-    // Default Constructor
     public Employee() {}
 
-    // Parameterized Constructor
     public Employee(int employeeID, int userID, String role, double salary, String name) {
         this.employeeID = employeeID;
         this.userID = userID;
@@ -19,7 +17,6 @@ public class Employee {
         this.name = name;
     }
 
-    // Getters and Setters
     public int getEmployeeID() {
         return employeeID;
     }

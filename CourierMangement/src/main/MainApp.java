@@ -38,7 +38,7 @@ public class MainApp {
             System.out.print("Enter your choice: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Clear newline
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -46,7 +46,7 @@ public class MainApp {
                     int senderId = scanner.nextInt();
                     System.out.print("Receiver User ID: ");
                     int receiverId = scanner.nextInt();
-                    scanner.nextLine(); // consume newline
+                    scanner.nextLine(); 
                     System.out.print("Package Name: ");
                     String packageName = scanner.nextLine();
                     System.out.print("Number of Packages: ");
@@ -72,7 +72,7 @@ public class MainApp {
                 case 3:
                     System.out.print("Enter Courier ID: ");
                     int cid = scanner.nextInt();
-                    scanner.nextLine(); // consume newline
+                    scanner.nextLine(); 
                     System.out.print("Enter new Status(Proceesing/Cancelled/Delivered): ");
                     String newStatus = scanner.nextLine();
                     service.updateCourierStatus(cid, newStatus);

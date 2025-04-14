@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class ParcelTracking {
     public static void main(String[] args) {
-        // Initialize the 2D array with parcel tracking numbers and their status
         String[][] parcels = {
             {"12345", "In Transit"},
             {"67890", "Out for Delivery"},
@@ -13,12 +12,10 @@ public class ParcelTracking {
             {"78901", "Delivered"}
         };
 
-        // User input for tracking number
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter Parcel Tracking Number: ");
         String trackingNumber = scanner.nextLine();
 
-        // Simulate tracking
         boolean found = false;
         for (String[] parcel : parcels) {
             if (parcel[0].equals(trackingNumber)) {

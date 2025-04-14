@@ -9,12 +9,10 @@ public class CourierServiceDb {
 
     private Connection connection;
 
-    // ✅ Constructor to initialize DB connection
     public CourierServiceDb(Connection connection) {
         this.connection = connection;
     }
 
-    // ✅ Insert a new courier
     public void addCourier(Courier courier) {
         String sql = "INSERT INTO Courier (senderUserID, receiverUserID, packageName, numberOfPackages, weight, serviceID, trackingNumber, status, createdDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
@@ -36,7 +34,6 @@ public class CourierServiceDb {
         }
     }
 
-    // ✅ Assign a courier to an employee
     public void assignCourier(int courierId, int employeeId) {
         String sql = "UPDATE Courier SET employeeID = ? WHERE courierID = ?";
 
@@ -55,7 +52,6 @@ public class CourierServiceDb {
         }
     }
 
-    // ✅ Update courier status using tracking number
     public void updateCourierStatus(String trackingNumber, String newStatus) {
         String sql = "UPDATE Courier SET status = ? WHERE trackingNumber = ?";
 
@@ -74,7 +70,6 @@ public class CourierServiceDb {
         }
     }
 
-    // ✅ Overloaded method: Update courier status using courierID
     public void updateCourierStatus(int courierId, String newStatus) {
         String sql = "UPDATE Courier SET status = ? WHERE courierID = ?";
 
@@ -93,7 +88,6 @@ public class CourierServiceDb {
         }
     }
 
-    // ✅ Fetch delivery history by tracking number
     public void getDeliveryHistory(String trackingNumber) {
         String sql = "SELECT * FROM Courier WHERE trackingNumber = ?";
 
@@ -114,7 +108,6 @@ public class CourierServiceDb {
         }
     }
 
-    // ✅ Generate shipment status report
     public void generateShipmentStatusReport() {
         String sql = "SELECT status, COUNT(*) AS count FROM Courier GROUP BY status";
 
@@ -130,7 +123,6 @@ public class CourierServiceDb {
         }
     }
 
-    // ✅ Generate revenue report (assumes delivery charge exists)
     public void generateRevenueReport() {
         String sql = "SELECT SUM(cs.Cost * c.NumberOfPackages) AS totalRevenue " +
                      "FROM Courier c " +

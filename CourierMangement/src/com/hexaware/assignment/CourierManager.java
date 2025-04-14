@@ -4,25 +4,22 @@ import java.util.*;
 
 public class CourierManager {
 
-    // Method to find the nearest available courier (first with status "Available")
     public static Courier findNearestAvailableCourier(List<Courier> couriers) {
         for (Courier c : couriers) {
             if (c.status.equalsIgnoreCase("Available")) {
                 return c;
             }
         }
-        return null; // No available courier found
+        return null; 
     }
 
     public static void main(String[] args) {
-        // Sample list of couriers
         List<Courier> couriers = new ArrayList<>(); 
         couriers.add(new Courier(101, 1, 5, "Laptop", "Busy"));
         couriers.add(new Courier(102, 2, 6, "Phone", "Available"));
         couriers.add(new Courier(103, 3, 7, "Documents", "Busy"));
         couriers.add(new Courier(104, 4, 8, "Clothes", "Available"));
 
-        // Finding nearest available courier
         Courier nearest = findNearestAvailableCourier(couriers);
 
         if (nearest != null) {

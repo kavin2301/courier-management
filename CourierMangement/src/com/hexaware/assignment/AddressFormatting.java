@@ -14,7 +14,7 @@ public class AddressFormatting {
     }
 
     public static String formatZipCode(String zipCode) {
-        return zipCode.replaceAll("[^0-9]", ""); // Remove non-numeric characters
+        return zipCode.replaceAll("[^0-9]", ""); 
     }
 
     public static void main(String[] args) {

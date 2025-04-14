@@ -5,17 +5,14 @@ public class CourierServices {
     private String serviceName;
     private double cost;
 
-    // Default Constructor
     public CourierServices() {}
 
-    // Parameterized Constructor
     public CourierServices(int serviceID, String serviceName, double cost) {
         this.serviceID = serviceID;
         this.serviceName = serviceName;
         this.cost = cost;
     }
 
-    // Getters and Setters
     public int getServiceID() {
         return serviceID;
     }

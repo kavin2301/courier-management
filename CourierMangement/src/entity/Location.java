@@ -5,17 +5,14 @@ public class Location {
     private String locationName;
     private String address;
 
-    // Default Constructor
     public Location() {}
 
-    // Parameterized Constructor
     public Location(int locationID, String locationName, String address) {
         this.locationID = locationID;
         this.locationName = locationName;
         this.address = address;
     }
 
-    // Getters and Setters
     public int getLocationID() {
         return locationID;
     }

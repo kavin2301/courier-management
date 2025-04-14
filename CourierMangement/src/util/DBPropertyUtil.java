@@ -9,7 +9,7 @@ public class DBPropertyUtil {
     public static String getConnectionString(String propertyFileName) {
         String connectionString = null;
         try {
-            System.out.println("🔍 Attempting to load DB properties from: " + propertyFileName);
+            System.out.println("Attempting to load DB properties from: " + propertyFileName);
             
             Properties props = new Properties();
             FileInputStream fis = new FileInputStream(propertyFileName);

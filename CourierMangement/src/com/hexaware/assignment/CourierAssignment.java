@@ -4,7 +4,7 @@ public class CourierAssignment {
 
 	public static void main(String[] args) {
 		 String[] employees = {"John", "Alice", "Bob"};
-	        int[] loadCapacity = {2, 1, 0}; // Number of packages they can still handle
+	        int[] loadCapacity = {2, 1, 0}; 
 
 	        boolean assigned = false;
 	        for (int i = 0; i < employees.length; i++) {
